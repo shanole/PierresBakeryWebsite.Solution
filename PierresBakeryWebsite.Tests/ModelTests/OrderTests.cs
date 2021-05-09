@@ -56,5 +56,18 @@ namespace PierresBakeryWebsite.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      Order newOrder1 = new Order("One dozen loaves of bread", 24, "April 21, 2021");
+      Order newOrder2 = new Order("three pastries",8,"January 4, 2020");
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
