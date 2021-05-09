@@ -41,5 +41,20 @@ namespace PierresBakeryWebsite.Tests
       Order newOrder = new Order(description, price, date);
       Assert.AreEqual(price, newOrder.Price);
     }
+    [TestMethod]
+    public void GetId_ReturnsIdOfInstantiatedOrders_Int()
+    {
+      //Arrange
+      string description = "1 loaf of bread";
+      int price = 2;
+      string date = "January 2, 2021";
+      Order testOrder = new Order(description, price, date);
+
+      //Act
+      int result = testOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
