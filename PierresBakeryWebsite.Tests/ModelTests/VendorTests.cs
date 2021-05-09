@@ -8,6 +8,11 @@ namespace PierresBakeryWebsite.Tests
   [TestClass]
   public class VendorTests
   {
-    
+    [TestMethod]
+    public void VendorContructor_CreatesInstanceofVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor),newVendor.GetType()); 
+    }
   }
 }
