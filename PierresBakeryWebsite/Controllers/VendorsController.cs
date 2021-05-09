@@ -33,5 +33,17 @@ namespace PierresBakeryWebsite.Controllers
       model.Add("orders",vendorOrders);
       return View(model);
     }
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderDescription, int orderPrice, string orderDate)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>{};
+      Vendor selectedVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderDescription, orderPrice, orderDate);
+      selectedVendor.AddOrder(newOrder);
+      List<Order> vendorItems = selectedVendor.Orders;
+      model.Add("vendor",selectedVendor);
+      model.Add("orders",vendorItems);
+      return View("Show",model);
+    }
   }
 }
