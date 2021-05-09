@@ -18,7 +18,7 @@
 
 ## Description <a id="description"></a>
 
-Blah blah
+This is a web application made using C# and .NET5 that serves to track orders and vendors for a fictional bakery business, Pierre's Bakery. It demonstrates understanding of MVC applications, RESTful routing, and HTTP requests.
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -37,7 +37,7 @@ Installation
 * Clone this repository to your machine `$ git clone https://github.com/shanole/PierresBakeryWebsite.Solution`
 * In the terminal, navigate to the project directory `$ cd PierresBakeryWebsite.Solution/PierresBakeryWebsite`
 * Compile code by running command `$ dotnet build`
-* Run program with command `$ dotnet run` to open webpage on browser.
+* Run program with command `$ dotnet run` to open webpage on browser at `http://localhost:5000`
 
 Running tests with MSTest
 * Navigate to the tests directory `PierresBakeryWebsite.Solution/PierresBakeryWebsite.Tests`
@@ -47,21 +47,7 @@ Running tests with MSTest
 
 ## Specifications <a id="specs"></a>
 
-All unit testing was done with MSTest. To see full specs, 
-
-Please refer to the .cs files in the `PierresBakeryWebsite.Solution/PierresBakeryWebsite.Tests/ModelTests` direct for a comprehensive breakdown of all specs for this project. All tests were run through MSTest.
-
-__FILLER TEXT Unit testing for Bread class__
-* For Bread constructor
-  1. Bread constructor should return instance of Bread object.
-  2. Getting the BreadOrders property should return number of orders of bread.
-* For CalculatePrice() method
-  1. 1 order of bread should equal $5
-  2. 2 orders of bread should equal $10
-  3. 3 orders of bread should equal $10
-  4. 6 orders of bread should equal $20
-  5. 7 orders of bread should equal $25
-
+All unit testing was done with MSTest. Please refer to the .cs files in the `PierresBakeryWebsite.Solution/PierresBakeryWebsite.Tests/ModelTests` directory for a comprehensive breakdown of all specs for this project. All tests were run through MSTest.
 
 ## Known Bugs <a id="bugs"></a>
 * None known at this time. If you find one, please don't hesitate to contact me about it!
