@@ -10,5 +10,13 @@ namespace PierresBakeryWebsite.Models
    public int Id { get; }
 
    private List<Order> _instances = new List<Order> {};
+   public Order (string description, int price, string date)
+   {
+     Description = description;
+     Price = price;
+     Date = date;
+     _instances.Add(this);
+     Id = _instances.Count;
+   }
  } 
 }
