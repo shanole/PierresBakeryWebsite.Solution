@@ -3,9 +3,9 @@
 }
 <h1>Order Details:</h1>
 
-<h3>Description: @Model["order"].Description</h3>
-<h3>Price: $@Model["order"].Price</h3>
-<h3>Date order was placed: @Model["order"].Date</h3>
+<p>Description: @Model["order"].Description</p>
+<p>Price: $@Model["order"].Price</p>
+<p>Date order was placed: @Model["order"].Date</p>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/vendors'>See all vendors</a>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+<p><a href='/vendors'>See all vendors</a></p>
