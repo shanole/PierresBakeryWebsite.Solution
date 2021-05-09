@@ -1,7 +1,7 @@
 @using PierresBakeryWebsite.Models;
 
 <h3>@Model["vendor"].Name Orders</h3>
-
+<h4><em>@Model["vendor"].Description</em></h4>
 
 @if (Model["orders"].Count == 0)
 {
@@ -14,6 +14,6 @@
 }
 </ol>
 
-<p><a href='/categories/@Model["vendor"].Id/orders/new'>Record a new order for this vendor</a></p>
-<p><a href='/categories'>See all vendors</a></p>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Record a new order for this vendor</a></p>
+<p><a href='/vendors'>See all vendors</a></p>
 <p><a href='/'>Return to Main Page</a></p>
