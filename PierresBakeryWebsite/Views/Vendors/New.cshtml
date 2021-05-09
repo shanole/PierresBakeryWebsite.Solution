@@ -5,11 +5,11 @@
 <p>Add details for your vendor here:</p>
 
 <form action="/vendors" method="post">
-  <label for="vendorName">Vendor name</label>
-  <input id="vendorName" name="vendorName" type="text">
-  <label for="vendorDescription">Vendor description</label>
-  <input id="vendorDescription" name="vendorDescription" type="text">
-  <button type="submit">Add</button>
+  <label for="vendorName" class="form-label">Vendor name</label>
+  <input id="vendorName" name="vendorName" type="text" class="form-control">
+  <label for="vendorDescription" class="form-label">Vendor description</label>
+  <textarea class="form-control" name="vendorDescription" id="vendorDescription" rows="3"></textarea></br>
+  <button class="btn btn-primary" type="submit">Add</button>
 </form>
 
 <p><a href="/">Back home</a></p>

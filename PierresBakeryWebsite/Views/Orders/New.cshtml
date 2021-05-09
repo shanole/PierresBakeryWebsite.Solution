@@ -5,13 +5,13 @@
 
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-  <label for="orderDescription">Order Description</label>
-  <input id="orderDescription" name="orderDescription" type="text">
-  <label for="orderPrice">Order Invoice (dollars)</label>
-  <input id="orderPrice" name="orderPrice" type="text">
-  <label for="orderDate">Order Date</label>
-  <input id="orderDate" name="orderDate" type="text">
-  <button type='submit'>Add Order</button>
+  <label for="orderDescription" class="form-label">Order Description</label>
+  <input id="orderDescription" name="orderDescription" class="form-control" type="text">
+  <label for="orderPrice" class="form-label">Order Invoice (dollars)</label>
+  <input id="orderPrice" name="orderPrice" type="text" class="form-control">
+  <label for="orderDate" class="form-label">Order Date</label>
+  <input id="orderDate" name="orderDate" type="text" class="form-control"></br>
+  <button class="btn btn-primary" type="submit">Add Order</button>
 </form>
 
 <p><a href="/vendors/@Model.Id">Back to @Model.Name page</a></p>
