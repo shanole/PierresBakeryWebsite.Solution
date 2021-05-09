@@ -61,5 +61,19 @@ namespace PierresBakeryWebsite.Tests
       //Assert
       Assert.AreEqual(testVendor2,result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      Vendor testVendor1 = new Vendor("Costco","wholesale outlet");
+      Vendor testVendor2 = new Vendor("Cafe","local restaurant");
+      List<Vendor> testList = new List<Vendor> {testVendor1, testVendor2};
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(testList,result);
+    }
   }
 }
