@@ -1,0 +1,19 @@
+@using PierresBakeryWebsite.Models;
+
+<h3>@Model["vendor"].Name Orders</h3>
+
+
+@if (Model["orders"].Count == 0)
+{
+  <p>This vendor does not have any orders yet.</p>
+}
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/categories/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+}
+</ol>
+
+<p><a href='/categories/@Model["vendor"].Id/orders/new'>Record a new order for this vendor</a></p>
+<p><a href='/categories'>See all vendors</a></p>
+<p><a href='/'>Return to Main Page</a></p>
