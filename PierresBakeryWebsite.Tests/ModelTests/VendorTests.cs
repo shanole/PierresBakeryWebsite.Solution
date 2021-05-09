@@ -30,5 +30,19 @@ namespace PierresBakeryWebsite.Tests
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(description, newVendor.Description);
     }
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "Costco";
+      string description = "wholesale outlet";
+      Vendor newVendor = new Vendor(name, description);
+
+      //Act
+      int result = newVendor.Id;
+
+      //Assert
+      Assert.AreEqual(1,result);
+    }
   }
 }
