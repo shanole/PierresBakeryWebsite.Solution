@@ -22,7 +22,7 @@ namespace PierresBakeryWebsite.Models
     }
     public static List<Vendor> GetAll()
     {
-      return new List<Vendor> {};
+      return _instances;
     }
     public static Vendor Find(int searchId)
     {
