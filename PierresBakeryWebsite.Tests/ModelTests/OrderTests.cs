@@ -24,7 +24,16 @@ namespace PierresBakeryWebsite.Tests
       Assert.AreEqual(description, newOrder.Description);
     }
     [TestMethod]
-    public void GetPrice_ReturnsOrderDescription_String()
+    public void GetPrice_ReturnsOrderPrice_int()
+    {
+      string description = "12 cookies";
+      int price = 10;
+      string date = "January 1, 2021";
+      Order newOrder = new Order(description, price, date);
+      Assert.AreEqual(price, newOrder.Price);
+    }
+    [TestMethod]
+    public void GetDate_ReturnsOrderDate_String()
     {
       string description = "12 cookies";
       int price = 10;
