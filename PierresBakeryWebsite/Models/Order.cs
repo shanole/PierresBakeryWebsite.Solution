@@ -9,7 +9,7 @@ namespace PierresBakeryWebsite.Models
    public string Date { get; set; }
    public int Id { get; }
 
-   private List<Order> _instances = new List<Order> {};
+   private static List<Order> _instances = new List<Order> {};
    public Order (string description, int price, string date)
    {
      Description = description;
@@ -17,6 +17,14 @@ namespace PierresBakeryWebsite.Models
      Date = date;
      _instances.Add(this);
      Id = _instances.Count;
+   }
+   public static void ClearAll()
+   {
+     _instances.Clear();
+   }
+   public static Order Find(int searchId)
+   {
+     return _instances[searchId-1];
    }
  } 
 }
