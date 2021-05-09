@@ -15,6 +15,7 @@ namespace PierresBakeryWebsite.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
+      Orders = new List<Order>{};
     }
     public static void ClearAll()
     {
@@ -30,7 +31,7 @@ namespace PierresBakeryWebsite.Models
     }
     public void AddOrder(Order order)
     {
-      
+      Orders.Add(order);
     }
   }
 }
