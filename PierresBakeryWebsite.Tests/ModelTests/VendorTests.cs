@@ -46,34 +46,50 @@ namespace PierresBakeryWebsite.Tests
       int result = newVendor.Id;
 
       //Assert
-      Assert.AreEqual(1,result);
+      Assert.AreEqual(1, result);
     }
     [TestMethod]
     public void Find_ReturnsCorrectVendor_Vendor()
     {
       //Arrange
-      Vendor testVendor1 = new Vendor("Costco","wholesale outlet");
-      Vendor testVendor2 = new Vendor("Cafe","local restaurant");
+      Vendor testVendor1 = new Vendor("Costco", "wholesale outlet");
+      Vendor testVendor2 = new Vendor("Cafe", "local restaurant");
 
       //Act
       Vendor result = Vendor.Find(2);
 
       //Assert
-      Assert.AreEqual(testVendor2,result);
+      Assert.AreEqual(testVendor2, result);
     }
     [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
       //Arrange
-      Vendor testVendor1 = new Vendor("Costco","wholesale outlet");
-      Vendor testVendor2 = new Vendor("Cafe","local restaurant");
-      List<Vendor> testList = new List<Vendor> {testVendor1, testVendor2};
+      Vendor testVendor1 = new Vendor("Costco", "wholesale outlet");
+      Vendor testVendor2 = new Vendor("Cafe", "local restaurant");
+      List<Vendor> testList = new List<Vendor> { testVendor1, testVendor2 };
 
       //Act
       List<Vendor> result = Vendor.GetAll();
 
       //Assert
-      CollectionAssert.AreEqual(testList,result);
+      CollectionAssert.AreEqual(testList, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      Order newOrder = new Order("One dozen loaves of bread", 24, "April 21, 2021");
+      List<Order> newList = new List<Order> { newOrder };
+      
+      Vendor newVendor = new Vendor("Costco","wholesale outlet");
+      newVendor.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Orders;
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }

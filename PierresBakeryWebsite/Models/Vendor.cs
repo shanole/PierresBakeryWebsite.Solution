@@ -7,7 +7,7 @@ namespace PierresBakeryWebsite.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
-    private static List<Vendor> _instances = new List<Vendor> {};
+    private static List<Vendor> _instances = new List<Vendor> { };
     public List<Order> Orders { get; set; }
     public Vendor(string name, string description)
     {
@@ -26,7 +26,11 @@ namespace PierresBakeryWebsite.Models
     }
     public static Vendor Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId - 1];
+    }
+    public void AddOrder(Order order)
+    {
+      
     }
   }
 }
